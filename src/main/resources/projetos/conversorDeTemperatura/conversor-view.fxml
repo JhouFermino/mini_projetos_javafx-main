@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="382.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetos.conversorDeTemperatura.ConversorController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Conversor de Temperatura">
+         <font>
+            <Font size="32.0" />
+         </font>
+         <padding>
+            <Insets bottom="24.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="380.0">
+         <children>
+            <TextField fx:id="tfNumero" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="33.0" prefWidth="380.0">
+         <children>
+            <Label text="Escolha a operação:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="380.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onClickConverterEmCelsius" text="Celsius">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator prefHeight="0.0" prefWidth="0.0" />
+            <Button mnemonicParsing="false" onAction="#onClickConverterEmFahrenheit" text="Fahrenheit">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="76.0" prefWidth="380.0">
+         <children>
+            <Label fx:id="labelResultado" prefHeight="138.0" prefWidth="318.0" text="O resultado vai aparecer aqui!" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

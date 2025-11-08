@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="385.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetos.montagemDeLanche.MontagemDeLancheController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Montagem de Lanche">
+         <font>
+            <Font size="32.0" />
+         </font>
+         <padding>
+            <Insets bottom="24.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="183.0">
+               <children>
+                  <Label text="Tipo de Pão:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbTipoDePao" prefWidth="150.0" promptText="Selecionar Tipo" />
+                  <Separator orientation="VERTICAL" prefHeight="14.0" prefWidth="6.0" />
+                  <Label text="Tipo de Carne:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="rbBovina" mnemonicParsing="false" text="Bovina" />
+                  <RadioButton fx:id="rbFrango" mnemonicParsing="false" text="Frango" />
+                  <RadioButton fx:id="rbSoja" mnemonicParsing="false" text="Vegana (Soja)" />
+               </children>
+            </VBox>
+            <Separator prefHeight="2.0" prefWidth="73.0" />
+            <VBox prefHeight="129.0" prefWidth="195.0">
+               <children>
+                  <Label text="Adicionais (Opcional):">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="10.0" prefWidth="195.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <CheckBox fx:id="cbBacon" mnemonicParsing="false" text="Bacon" />
+                              <CheckBox fx:id="cbQueijo" mnemonicParsing="false" text="Queijo" />
+                           </children>
+                        </VBox>
+                        <Separator prefHeight="8.0" prefWidth="14.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <CheckBox fx:id="cbSalada" mnemonicParsing="false" text="Salada" />
+                              <CheckBox fx:id="cbMolho" mnemonicParsing="false" text="Molho" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator orientation="VERTICAL" prefHeight="16.0" prefWidth="0.0" />
+                  <Label text="Nome do Cliente:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfNome" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#onClickGerarPedido" text="Gerar Pedido" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="16.0" top="16.0" />
+         </VBox.margin>
+      </Button>
+      <Label fx:id="lbResposta">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

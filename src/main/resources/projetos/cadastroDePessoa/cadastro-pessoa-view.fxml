@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="429.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetos.cadastroDePessoa.CadastroPessoaController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Cadastro de Pessoa">
+         <font>
+            <Font size="32.0" />
+         </font>
+         <padding>
+            <Insets bottom="24.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="101.0" prefWidth="367.0">
+         <children>
+            <VBox prefHeight="110.0" prefWidth="172.0">
+               <children>
+                  <Label text="Nome:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfNome" />
+                  <Label text="Sexo">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="rbMasculino" mnemonicParsing="false" onAction="#onClickMasculino" text="Masculino" />
+                  <RadioButton fx:id="rbFeminino" mnemonicParsing="false" onAction="#onClickFeminino" text="Feminino" />
+               </children>
+            </VBox>
+            <Separator prefHeight="16.0" prefWidth="76.0" />
+            <VBox prefHeight="110.0" prefWidth="182.0">
+               <children>
+                  <Label text="Idade:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfIdade" />
+                  <Label text="Preferências (opcional):">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="cbEsportes" mnemonicParsing="false" prefHeight="18.0" prefWidth="183.0" text="Gosta de patricar esportes" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#onClickFazerAnalise" text="Fazer Análise" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="32.0" top="32.0" />
+         </VBox.margin>
+      </Button>
+      <Label fx:id="labelResposta">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
